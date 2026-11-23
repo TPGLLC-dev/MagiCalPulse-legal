@@ -158,7 +158,7 @@
 
 <div class="header">
     <h1>Privacy Policy</h1>
-    <p class="subtitle"><strong>MagiCalPulse</strong> — Effective Date: August 12, 2026 &nbsp;|&nbsp; Last Updated: October 7, 2026</p>
+    <p class="subtitle"><strong>MagiCalPulse</strong> — Effective Date: August 12, 2026 &nbsp;|&nbsp; Last Updated: November 23, 2026</p>
 </div>
 
 <div class="container">
@@ -214,7 +214,7 @@
         <h3>2.3 Sensitive Information</h3>
         <p>Depending on the features you use, we may collect:</p>
         <ul>
-            <li><strong>Location Data:</strong> With your permission, the App uses your device's location to show you on the park map and to notice when you leave a ride's area. Your coordinates are processed on your device and are never sent to our servers. When you enter a park, the App records only that day's date on your account, so in-park weather alerts reach guests who are there.</li>
+            <li><strong>Location Data:</strong> With your permission, the App uses your device's location to show you on the park map and to notice when you leave a ride's area. Your coordinates are processed on your device and are not stored on our servers. The one exception is Ask MagiCalPulse (Section 2.5): when you send a question, the App includes your last known position so our server can work out walking times; it is not stored and is never sent to the AI. When you enter a park, the App records only that day's date on your account, so in-park weather alerts reach guests who are there.</li>
             <li><strong>Photos &amp; Media:</strong> Access to your device's camera or photo library, only when you choose a profile picture. The photo you pick stays on your device: it is never uploaded to our servers, so we never receive it. Deleting the App or your account removes it; nothing else in your library is read.</li>
         </ul>
         <div class="callout">We will never collect sensitive data (location, photos) without your prior, explicit consent. You can revoke these permissions at any time through your device settings.</div>
@@ -224,6 +224,15 @@
             <li><strong>Social Login Providers:</strong> If you sign in with Apple or Google, we receive your name, email address, and public profile information as authorized by you during the login process. We do not receive your password from these services.</li>
             <li><strong>App Store purchases:</strong> If you buy a Pro pass or subscription, Apple and our purchase processor, RevenueCat, tell us which product you bought and whether it is active. We never receive your payment details. See Section 6.</li>
         </ul>
+
+        <h3>2.5 Ask MagiCalPulse (AI Answers)</h3>
+        <p>Ask MagiCalPulse lets signed-in users type or speak a question about waits, forecasts, weather or their plan. The App asks your permission before your first question is sent; if you choose <em>Not now</em>, nothing is sent and the rest of the App works as before. When you ask a question, we send the following to <strong>Anthropic, PBC</strong>, the company that makes the Claude AI model, through our own server, so it can write the answer:</p>
+        <ul>
+            <li>the text of your question (if you speak it, your device converts it to text first; we never receive the recording);</li>
+            <li>the park you are asking about and today's date;</li>
+            <li>the names of the rides and shows in your My Day plan.</li>
+        </ul>
+        <p>We do <strong>not</strong> send your name, email address, account ID or location to Anthropic. We do not keep the text of your questions or the answers on our servers; we keep only a count of how many questions each account has asked that day, to apply the daily limit. Your answers are saved on your device until 3 AM park time and are removed when you sign out or delete your account.</p>
     </section>
 
     <!-- 3. HOW WE USE YOUR INFORMATION -->
@@ -261,7 +270,7 @@
         <h2 class="section-title">5. How We Share Your Information</h2>
         <p>We do not sell, rent, or trade your personal information. We may share data only in the following circumstances:</p>
         <ul>
-            <li><strong>Service Providers:</strong> Trusted third-party vendors who process data on our behalf (hosting, authentication, purchase processing), bound by contractual obligations to protect your data.</li>
+            <li><strong>Service Providers:</strong> Trusted third-party vendors who process data on our behalf (hosting, authentication, purchase processing, and the AI that writes Ask MagiCalPulse answers), bound by contractual obligations to protect your data.</li>
             <li><strong>Legal Requirements:</strong> When required by law, regulation, legal process, or enforceable governmental request.</li>
             <li><strong>Safety &amp; Rights:</strong> To protect the rights, property, or safety of our users, the public, or our Company.</li>
             <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, bankruptcy, or sale of assets. You will be notified before your data is transferred and becomes subject to a different privacy policy.</li>
@@ -278,6 +287,8 @@
         <p>Your account, sign-in and app data are hosted on Google Firebase (Authentication, Realtime Database and Cloud Functions). We do not use Firebase Analytics, Crashlytics or any other analytics service. See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Information</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
         <h3>RevenueCat</h3>
         <p>In-app purchases are processed by Apple and managed by RevenueCat, which receives an anonymous app user ID, your purchase history and a device identifier (Identifier for Vendor, IDFV) so it can tell the App whether Pro is active and restore it on your devices. RevenueCat never receives your payment details. See the <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat Privacy Policy</a>.</p>
+        <h3>Anthropic (Ask MagiCalPulse)</h3>
+        <p>Answers to Ask MagiCalPulse questions are written by Anthropic's Claude model. Anthropic receives only what is listed in Section 2.5. Under Anthropic's commercial terms, it does not use this data to train its models, and it may keep it for up to 30 days for safety and abuse monitoring before deleting it. See the <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic Privacy Policy</a>.</p>
         <h3>Push Notification Services</h3>
         <p>To deliver push notifications, we use third-party notification service providers,
            including Expo and platform notification services such as Apple Push Notification Service (APNs).
@@ -301,6 +312,7 @@
             <li><strong>Account Data:</strong> Retained while your account is active and for up to 30 days after deletion to allow for recovery.</li>
             <li><strong>Support Communications:</strong> Retained for up to 2 years for quality assurance and legal purposes.</li>
             <li><strong>Legal Obligations:</strong> Certain data may be retained longer if required by applicable law (e.g., tax, fraud prevention).</li>
+            <li><strong>Ask MagiCalPulse:</strong> We do not retain your questions or answers. Anthropic may keep them for up to 30 days (see Section 6). The daily question count is kept with your account to apply the limit. Answers saved on your device are cleared at 3 AM park time, on sign-out, or when you delete your account.</li>
             <li><strong>Push Notification Tokens:</strong> Retained only for as long as necessary to provide notification services or until notifications are disabled, the App is uninstalled, or the associated account is deleted.</li>
         </ul>
         <p>When data is no longer needed, we securely delete or anonymize it.</p>
